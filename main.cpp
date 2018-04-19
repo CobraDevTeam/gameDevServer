@@ -1,9 +1,11 @@
 #include <iostream>
 
-using namespace std;
+#include "headers/server.hpp"
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    Server server;
+    server.run();
+
     return 0;
 }
