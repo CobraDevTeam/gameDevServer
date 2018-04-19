@@ -23,8 +23,7 @@ void Gateway::run()
         if(mListener.accept(client) == sf::Socket::Done)
         {
             // La socket est initialisée pour la nouvelle connexion, et envoyée en traitement au serveur
-            (*mServer).handleNewConnection(std::move(client));  // move a été cast sur client
-                                                                // -> client ne doit plus être utilisé au delà de cette ligne
+            (*mServer).handleNewConnection(client);
         }
     }
 
