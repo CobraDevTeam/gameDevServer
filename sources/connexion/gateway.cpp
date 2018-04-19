@@ -2,8 +2,6 @@
 
 #include "headers/server.hpp"
 
-using namespace connect;
-
 Gateway::Gateway(Server* server)
 : mListener()
 // Port abritraire temporaire

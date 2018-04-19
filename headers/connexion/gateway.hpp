@@ -14,9 +14,6 @@ class Server;
  * La fonction Gateway::run est une boucle infinie et a vocation a tourner dans un thread a part
  */
 
-namespace connect
-{
-
 class Gateway : private sf::NonCopyable
 {
     public:
@@ -32,7 +29,5 @@ class Gateway : private sf::NonCopyable
 
         Server*             mServer;
 };
-
-}
 
 #endif // GATEWAY_HPP

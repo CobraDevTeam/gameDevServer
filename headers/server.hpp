@@ -31,7 +31,7 @@ class Server : private sf::NonCopyable
 
     private:
         /// La classe permettant d'attendre gérer de nouvelles tentatives de connexion
-        connect::Gateway mGateway;
+        Gateway mGateway;
 };
 
 #endif // SERVER_HPP
