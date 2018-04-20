@@ -22,7 +22,7 @@ void Player::run()
     std::cout << "Player " << mID << " started to run" << std::endl;
 
     bool connectionActive(true);
-    sf::Packet receivedPacket;
+    Packet receivedPacket;
 
     while(connectionActive)
     {
@@ -31,26 +31,36 @@ void Player::run()
         {
             case sf::Socket::Done:
             {
-                // Ici on traite le paquet, comme par exemple ci-dessous
-                //sf::Uint16 request;
-                //receivedPacket >> request;
-                //std::cout << request << std::endl;
+                handlePacket(receivedPacket);
                 break;
             }
             case sf::Socket::Disconnected:
                 connectionActive = false;
+                handleDisconnection();
                 break;
 
             case sf::Socket::Error:
                 std::cout << "Error with connection " << mID << std::endl;
                 connectionActive = false;
+                handleDisconnection();
                 break;
+
             default:
                 std::cout << "Problem with connection " << mID << std::endl;
                 connectionActive = false;
+                handleDisconnection();
                 break;
         }
     }
     std::cout << "Thread " << mID << " is ending" << std::endl;
 }
 
+void Player::handleDisconnection()
+{
+    //TODO
+}
+
+void Player::handlePacket(Packet receivedPacket)
+{
+    //TODO
+}

@@ -6,6 +6,8 @@
 #include <memory>
 #include <ostream>
 
+#include "headers/connexion/packet.hpp"
+
 class Instance;
 
 /**
@@ -56,6 +58,17 @@ class Player
                  * @param nextInstance la nouvelle instance dans laquelle se trouver le joueur
                  */
         void    changeInstance(std::shared_ptr<Instance> nextInstance);
+
+                /**
+                 * @brief Méthode appelée lorsqu'une deconnexion est constatée
+                 */
+        void    handleDisconnection();
+
+                /**
+                 * @brief Méthode appelée lorsqu'un parquet est correctement reçu et doit être traité
+                 * @param receivedPacket le paquet reçu
+                 */
+        void    handlePacket(Packet receivedPacket);
 
                 /**
                  * @brief boucle principale d'exécution du thread du joueur
