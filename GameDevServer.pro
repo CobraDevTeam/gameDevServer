@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QMAKE_CXXFLAGS += -std=c++11 -pthread
+QMAKE_CXXFLAGS += -std=c++14 -pthread
 LIBS += -pthread
 
 CONFIG -= app_bundle
@@ -11,8 +11,16 @@ include(sfml.pri)
 SOURCES += \
         main.cpp \
     sources/server.cpp \
-    sources/connexion/gateway.cpp
+    sources/connexion/gateway.cpp \
+    sources/connexion/player.cpp \
+    sources/connexion/packet.cpp \
+    sources/instance.cpp \
+    sources/waitinginstance.cpp
 
 HEADERS += \
     headers/server.hpp \
-    headers/connexion/gateway.hpp
+    headers/connexion/gateway.hpp \
+    headers/connexion/player.hpp \
+    headers/connexion/packet.hpp \
+    headers/instance.hpp \
+    headers/waitinginstance.hpp
