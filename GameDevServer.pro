@@ -23,4 +23,11 @@ HEADERS += \
     headers/connexion/player.hpp \
     headers/connexion/packet.hpp \
     headers/instance.hpp \
-    headers/waitinginstance.hpp
+    headers/waitinginstance.hpp \
+    headers/utilities/smartptr/smartptr.hpp \
+    headers/utilities/smartptr/policies/deleter.hpp \
+    headers/utilities/smartptr/policies/ownership.hpp \
+    headers/utilities/smartptr/policies/storage.hpp \
+    headers/utilities/smartptr/policies/deleter.hpp \
+    headers/utilities/smartptr/policies/ownership.hpp \
+    headers/utilities/smartptr/policies/storage.hpp
